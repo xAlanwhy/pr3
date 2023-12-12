@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 3002;
 
 const dbhost = process.env.HOST || 'localhost';
-const dbdatabase = process.env.DATABASE || 'sql5669812';
+const dbdatabase = process.env.DATABASE || 'dbfinal';
 const dbuser = process.env.USER || 'root';
 const dbpassword = process.env.PASSWORD || '';
 
