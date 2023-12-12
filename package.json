@@ -5,7 +5,8 @@
   "main": "MyApp.js",
   "scripts": {
     "dev": "nodemon MyApp.js",
-    "start": "node MyApp.js"
+    "start": "node MyApp.js",
+    "type": "model"
   },
   "keywords": [],
   "author": "",
