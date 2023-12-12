@@ -3,12 +3,20 @@ const mysql = require('mysql');
 
 const app = express();
 
-let conexion = mysql.createConnection({
-  host: "localhost",
-  database: "dbfinal",
-  user: "root",
-  password: ""
-});
+const port = process.env.PORT || 3002;
+
+const dbhost = process.env.HOST || 'localhost';
+const dbdatabase = process.env.DATABASE || 'sql5669812';
+const dbuser = process.env.USER || 'root';
+const dbpassword = process.env.PASSWORD || '';
+
+
+var connection = mysql.createConnection({
+    host: dbhost,
+    database: dbdatabase,
+    user: dbuser,
+    password: dbpassword
+})
 
 
 var path = require("path")
@@ -59,7 +67,7 @@ app.post("/validar", function (req, res) {
 });
 
 
-app.listen(3002, (req, res) => {
+app.listen(port, (req, res) => {
   console.log('Servidor web escuchando en el puerto 3002');
 });
 
